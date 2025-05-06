@@ -25,8 +25,15 @@ namespace Server.Items
     {
         [Constructable]
         public CrudeSharpeningStone()
+            : this(1)
+        {
+        }
+
+        [Constructable]
+        public CrudeSharpeningStone(int amount)
         {
             Name = "Crude Sharpening Stone";
+            Amount = amount;
             Offset = 3;
             Duration = TimeSpan.FromMinutes(30);
         }
